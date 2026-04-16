@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроизвольныйЗапрос" id="59">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПроизвольныйЗапрос</CommandName>
+				<ExtendedTooltip name="ФормаПроизвольныйЗапросРасширеннаяПодсказка" id="60"/>
+			</Button>
+			<Button name="ФормаПроизвольныйКод" id="110">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроизвольныйКод</CommandName>
+				<ExtendedTooltip name="ФормаПроизвольныйКодРасширеннаяПодсказка" id="111"/>
+			</Button>
+			<Button name="ФормаПолучитьИзмененияДляОбмена" id="80">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПолучитьИзмененияДляОбмена</CommandName>
+				<ExtendedTooltip name="ФормаПолучитьИзмененияДляОбменаРасширеннаяПодсказка" id="81"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="82">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="83"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="84">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<Pages name="Группа6" id="86">
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="87"/>
+							<ChildItems>
+								<Page name="Группа7" id="88">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>JSON</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="89"/>
+									<ChildItems>
+										<TextDocumentField name="ПолеЗапроса" id="90">
+											<DataPath>ПолеЗапроса</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ПолеЗапросаКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="ПолеЗапросаРасширеннаяПодсказка" id="92"/>
+										</TextDocumentField>
+									</ChildItems>
+								</Page>
+								<Page name="Группа8" id="93">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Код</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="94"/>
+									<ChildItems>
+										<TextDocumentField name="ТекстКода" id="95">
+											<DataPath>ТекстКода</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ТекстКодаКонтекстноеМеню" id="96"/>
+											<ExtendedTooltip name="ТекстКодаРасширеннаяПодсказка" id="97"/>
+										</TextDocumentField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<Pages name="Группа3" id="98">
+							<PagesRepresentation>TabsOnTop</PagesRepresentation>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="99"/>
+							<ChildItems>
+								<Page name="Группа4" id="100">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ответ</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="101"/>
+									<ChildItems>
+										<TextDocumentField name="ПолеОтвета" id="102">
+											<DataPath>ПолеОтвета</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ПолеОтветаКонтекстноеМеню" id="103"/>
+											<ExtendedTooltip name="ПолеОтветаРасширеннаяПодсказка" id="104"/>
+										</TextDocumentField>
+									</ChildItems>
+								</Page>
+								<Page name="Группа5" id="105">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица результата</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="106"/>
+									<ChildItems>
+										<SpreadSheetDocumentField name="ТаблицаРезультата" id="107">
+											<DataPath>ТаблицаРезультата</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ContextMenu name="ТаблицаРезультатаКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="ТаблицаРезультатаРасширеннаяПодсказка" id="109"/>
+										</SpreadSheetDocumentField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.КАМИ_ОбменДанными_Exchange_2</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПолеЗапроса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПолеЗапроса</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПолеОтвета" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле ответа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаРезультата" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица результата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстКода" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст кода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПроизвольныйЗапрос" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произвольный запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произвольный запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроизвольныйЗапрос</Action>
+		</Command>
+		<Command name="РегламентИзменения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регламент изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регламент изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РегламентИзменения</Action>
+		</Command>
+		<Command name="ПолучитьИзмененияДляОбмена" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить изменения для обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить изменения для обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьИзмененияДляОбмена</Action>
+		</Command>
+		<Command name="ПроизвольныйКод" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произвольный код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произвольный код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроизвольныйКод</Action>
+		</Command>
+	</Commands>
+</Form>

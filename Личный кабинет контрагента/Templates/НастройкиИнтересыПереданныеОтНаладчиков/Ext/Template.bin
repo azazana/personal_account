@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemAuto">
+			<use>false</use>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>КоличествоВзаимодействийПереданныхНеЗавершеноВСрок</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>КоличествоВзаимодействийПереданных</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>КоличествоВзаимодействий</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>КоличествоИнтересовПереданных</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<use>false</use>
+			<field>КоличествоИнтересов</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<left xsi:type="dcscor:Field">Проект</left>
+			<comparisonType>Equal</comparisonType>
+			<right xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d4p1:CatalogRef.Проекты">3af48e17-2ef4-11de-93c8-001e4f3cec08</right>
+			<viewMode>Normal</viewMode>
+			<userSettingID>9be11dac-10c7-4b89-8669-6d0e05d053a0</userSettingID>
+		</item>
+	</filter>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>НачалоПериода</dcscor:parameter>
+			<dcscor:value xsi:type="xs:dateTime">2023-04-19T17:30:00</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>КонецПериода</dcscor:parameter>
+			<dcscor:value xsi:type="xs:dateTime">2023-04-20T17:30:00</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>2024-01-01T00:00:00</v8:startDate>
+				<v8:endDate>2025-12-31T23:59:59</v8:endDate>
+			</dcscor:value>
+			<userSettingID>4a496267-2495-45f7-906e-4a5b5a6ce52a</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>ДатаЗавершения</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardBeginningDate">
+				<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+			</dcscor:value>
+			<viewMode>Normal</viewMode>
+			<userSettingID>15144cfe-4362-471c-9f71-e3e75bd91bca</userSettingID>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ПроизводственныйКалендарь</dcscor:parameter>
+			<dcscor:value xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config" xsi:type="d4p1:CatalogRef.ПроизводственныеКалендари">9a37f146-3d4b-11ec-a96c-00505691f4e4</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВключенаЗаменаРевизитаРазделСайта</dcscor:parameter>
+			<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+		</dcscor:item>
+	</dataParameters>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>Документ</field>
+				</item>
+				<item>
+					<field>СтатусВзаимодействия</field>
+				</item>
+				<item>
+					<field>ЗавершеноВзаимодействиеВовремя</field>
+				</item>
+				<item>
+					<field>ЗавершилВзаимодействиеОтветственный</field>
+				</item>
+				<item>
+					<field>ДатаЗавершенияВзаимодействия</field>
+				</item>
+				<item>
+					<field>ПереданоВзаимодействие</field>
+				</item>
+				<item>
+					<field>РазличаютсяОтветственные</field>
+				</item>
+				<item>
+					<field>НеЗавершеноВзаимодействиеПереданноеВСрок</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ЗавершеноВзаимодействиеВовремя</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">true</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:ДосьеХорошаяОценкаЦвет</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInOverall>DontUse</useInOverall>
+			<useInFieldsHeader>DontUse</useInFieldsHeader>
+			<useInHeader>DontUse</useInHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+			<useInResourceFieldsHeader>DontUse</useInResourceFieldsHeader>
+			<useInOverallHeader>DontUse</useInOverallHeader>
+			<useInOverallResourceFieldsHeader>DontUse</useInOverallResourceFieldsHeader>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Документ</field>
+				</item>
+				<item>
+					<field>СтатусВзаимодействия</field>
+				</item>
+				<item>
+					<field>ЗавершеноВзаимодействиеВовремя</field>
+				</item>
+				<item>
+					<field>ЗавершилВзаимодействиеОтветственный</field>
+				</item>
+				<item>
+					<field>ДатаЗавершенияВзаимодействия</field>
+				</item>
+				<item>
+					<field>ПереданоВзаимодействие</field>
+				</item>
+				<item>
+					<field>РазличаютсяОтветственные</field>
+				</item>
+				<item>
+					<field>НеЗавершеноВзаимодействиеПереданноеВСрок</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ЗавершеноВзаимодействиеВовремя</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">СтатусВзаимодействия</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Справочник.CRM_СостоянияСобытий.Завершено</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:ВажныеДанныеЦветБЭД</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInOverall>DontUse</useInOverall>
+			<useInFieldsHeader>DontUse</useInFieldsHeader>
+			<useInHeader>DontUse</useInHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+			<useInResourceFieldsHeader>DontUse</useInResourceFieldsHeader>
+			<useInOverallHeader>DontUse</useInOverallHeader>
+			<useInOverallResourceFieldsHeader>DontUse</useInOverallResourceFieldsHeader>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Документ</field>
+				</item>
+				<item>
+					<field>СтатусВзаимодействия</field>
+				</item>
+				<item>
+					<field>ЗавершеноВзаимодействиеВовремя</field>
+				</item>
+				<item>
+					<field>ЗавершилВзаимодействиеОтветственный</field>
+				</item>
+				<item>
+					<field>ПереданоВзаимодействие</field>
+				</item>
+				<item>
+					<field>РазличаютсяОтветственные</field>
+				</item>
+				<item>
+					<field>НеЗавершеноВзаимодействиеПереданноеВСрок</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">НеЗавершеноВзаимодействиеПереданноеВСрок</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">true</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветТекста</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInOverall>DontUse</useInOverall>
+			<useInFieldsHeader>DontUse</useInFieldsHeader>
+			<useInHeader>DontUse</useInHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+			<useInResourceFieldsHeader>DontUse</useInResourceFieldsHeader>
+			<useInOverallHeader>DontUse</useInOverallHeader>
+			<useInOverallResourceFieldsHeader>DontUse</useInOverallResourceFieldsHeader>
+		</item>
+		<item>
+			<use>false</use>
+			<selection>
+				<item>
+					<field>Автор</field>
+				</item>
+				<item>
+					<field>Ответственный</field>
+				</item>
+				<item>
+					<field>СостояниеИнтереса</field>
+				</item>
+				<item>
+					<field>ДатаЗакрытия</field>
+				</item>
+				<item>
+					<field>ПричинаОтказа</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">18</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+		</item>
+		<item>
+			<use>false</use>
+			<selection>
+				<item>
+					<field>КоличествоИнтересов</field>
+				</item>
+				<item>
+					<field>КоличествоИнтересовПереданных</field>
+				</item>
+				<item>
+					<field>КоличествоВзаимодействий</field>
+				</item>
+				<item>
+					<field>КоличествоВзаимодействийПереданныхНеЗавершеноВСрок</field>
+				</item>
+				<item>
+					<field>КоличествоВзаимодействийПереданных</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">14</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+		</item>
+	</conditionalAppearance>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>МакетОформления</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionAttributesPlacement">Separately</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+			<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+			<viewMode>Inaccessible</viewMode>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:use>false</dcscor:use>
+			<dcscor:parameter>Заголовок</dcscor:parameter>
+			<dcscor:value xsi:type="xs:string">Отчет по отработке переданных взаимодействий</dcscor:value>
+			<viewMode>Normal</viewMode>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+			<viewMode>Normal</viewMode>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+			<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+			<viewMode>Inaccessible</viewMode>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>Интерес.СоисполнителиПредставление</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>Номер</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>ДатаИнтереса</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>Ответственный</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>СостояниеИнтереса</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>Интерес.ПричинаОтказа</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>Интерес.Соисполнители.Соисполнитель</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>Описание</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+	</item>
+	<additionalProperties>
+		<v8:Property name="СтандартныеСвойстваПредопределенныхПараметровВывода">
+			<v8:Value xsi:type="v8:Array">
+				<v8:Value xsi:type="v8:Structure">
+					<v8:Property name="Идентификатор">
+						<v8:Value xsi:type="xs:string">TITLE</v8:Value>
+					</v8:Property>
+					<v8:Property name="Использование">
+						<v8:Value xsi:type="xs:boolean">false</v8:Value>
+					</v8:Property>
+					<v8:Property name="Значение">
+						<v8:Value xsi:type="xs:string">Отчет по отработке переданных взаимодействий</v8:Value>
+					</v8:Property>
+				</v8:Value>
+				<v8:Value xsi:type="v8:Structure">
+					<v8:Property name="Идентификатор">
+						<v8:Value xsi:type="xs:string">TITLEOUTPUT</v8:Value>
+					</v8:Property>
+					<v8:Property name="Использование">
+						<v8:Value xsi:type="xs:boolean">true</v8:Value>
+					</v8:Property>
+					<v8:Property name="Значение">
+						<v8:Value xsi:type="DataCompositionTextOutputType">DontOutput</v8:Value>
+					</v8:Property>
+				</v8:Value>
+				<v8:Value xsi:type="v8:Structure">
+					<v8:Property name="Идентификатор">
+						<v8:Value xsi:type="xs:string">DATAPARAMETERSOUTPUT</v8:Value>
+					</v8:Property>
+					<v8:Property name="Использование">
+						<v8:Value xsi:type="xs:boolean">true</v8:Value>
+					</v8:Property>
+					<v8:Property name="Значение">
+						<v8:Value xsi:type="DataCompositionTextOutputType">Auto</v8:Value>
+					</v8:Property>
+				</v8:Value>
+				<v8:Value xsi:type="v8:Structure">
+					<v8:Property name="Идентификатор">
+						<v8:Value xsi:type="xs:string">FILTEROUTPUT</v8:Value>
+					</v8:Property>
+					<v8:Property name="Использование">
+						<v8:Value xsi:type="xs:boolean">true</v8:Value>
+					</v8:Property>
+					<v8:Property name="Значение">
+						<v8:Value xsi:type="DataCompositionTextOutputType">Auto</v8:Value>
+					</v8:Property>
+				</v8:Value>
+			</v8:Value>
+		</v8:Property>
+		<v8:Property name="ПараметрыПодбора">
+			<v8:Value xsi:type="v8:Map"/>
+		</v8:Property>
+		<v8:Property name="РасширенноеОписаниеТипов">
+			<v8:Value xsi:type="v8:Map">
+				<v8:pair>
+					<v8:Key xsi:type="xs:decimal">0</v8:Key>
+					<v8:Value xsi:type="v8:Structure">
+						<v8:Property name="СодержитТипТип">
+							<v8:Value xsi:type="xs:boolean">false</v8:Value>
+						</v8:Property>
+						<v8:Property name="СодержитТипДата">
+							<v8:Value xsi:type="xs:boolean">false</v8:Value>
+						</v8:Property>
+						<v8:Property name="СодержитТипБулево">
+							<v8:Value xsi:type="xs:boolean">false</v8:Value>
+						</v8:Property>
+						<v8:Property name="СодержитТипСтрока">
+							<v8:Value xsi:type="xs:boolean">false</v8:Value>
+						</v8:Property>
+						<v8:Property name="СодержитТипЧисло">
+							<v8:Value xsi:type="xs:boolean">false</v8:Value>
+						</v8:Property>
+						<v8:Property name="СодержитТипПериод">
+							<v8:Value xsi:type="xs:boolean">true</v8:Value>
+						</v8:Property>
+						<v8:Property name="СодержитТипУИД">
+							<v8:Value xsi:type="xs:boolean">false</v8:Value>
+						</v8:Property>
+						<v8:Property name="СодержитТипХранилище">
+							<v8:Value xsi:type="xs:boolean">false</v8:Value>
+						</v8:Property>
+						<v8:Property name="СодержитОбъектныеТипы">
+							<v8:Value xsi:type="xs:boolean">false</v8:Value>
+						</v8:Property>
+						<v8:Property name="ОграниченнойДлины">
+							<v8:Value xsi:type="xs:boolean">true</v8:Value>
+						</v8:Property>
+						<v8:Property name="КоличествоТипов">
+							<v8:Value xsi:type="xs:decimal">1</v8:Value>
+						</v8:Property>
+						<v8:Property name="КоличествоПримитивныхТипов">
+							<v8:Value xsi:type="xs:decimal">0</v8:Value>
+						</v8:Property>
+						<v8:Property name="ОбъектныеТипы">
+							<v8:Value xsi:type="v8:Array"/>
+						</v8:Property>
+						<v8:Property name="ОписаниеТиповИсходное">
+							<v8:Value xsi:type="v8:TypeDescription">
+								<v8:Type>v8:StandardPeriod</v8:Type>
+							</v8:Value>
+						</v8:Property>
+						<v8:Property name="ОписаниеТиповДляФормы">
+							<v8:Value xsi:type="v8:TypeDescription">
+								<v8:Type>v8:StandardPeriod</v8:Type>
+							</v8:Value>
+						</v8:Property>
+					</v8:Value>
+				</v8:pair>
+			</v8:Value>
+		</v8:Property>
+		<v8:Property name="ПорядокЭлементовНастроек">
+			<v8:Value xsi:type="v8:Map">
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">15144cfe-4362-471c-9f71-e3e75bd91bca</v8:Key>
+					<v8:Value xsi:type="xs:decimal">1</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">113a7086-386e-432b-87f4-dfa0d4f8b7d4</v8:Key>
+					<v8:Value xsi:type="xs:decimal">1</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">4a496267-2495-45f7-906e-4a5b5a6ce52a</v8:Key>
+					<v8:Value xsi:type="xs:decimal">-1</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">94c5d169-e4ce-41fa-b117-0c111d02ab20</v8:Key>
+					<v8:Value xsi:type="xs:decimal">8</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">6665b291-18f4-43c2-8365-af495e1ed21c</v8:Key>
+					<v8:Value xsi:type="xs:decimal">2</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">067bd9e6-f745-45d4-8eed-b2dd21da3122</v8:Key>
+					<v8:Value xsi:type="xs:decimal">3</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">1e3abd68-a35b-4126-b535-3df2bb89169d</v8:Key>
+					<v8:Value xsi:type="xs:decimal">1</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">846b140d-fe31-4c50-9fff-2e467df1823d</v8:Key>
+					<v8:Value xsi:type="xs:decimal">12</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">eedcb2cb-27ff-4b7c-8f61-317f3cf15e2c</v8:Key>
+					<v8:Value xsi:type="xs:decimal">10</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">6003a93f-dcb7-4d22-9835-0f29cfb96d8a</v8:Key>
+					<v8:Value xsi:type="xs:decimal">5</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">1bd1bf30-7b53-45bc-862e-33fc096966be</v8:Key>
+					<v8:Value xsi:type="xs:decimal">6</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">5ee9b088-3a23-4622-a368-8b603efea3bb</v8:Key>
+					<v8:Value xsi:type="xs:decimal">4</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">01a036bf-ccec-4308-ad28-d563e98189f6</v8:Key>
+					<v8:Value xsi:type="xs:decimal">11</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">75faff20-5a32-43d6-9dfd-23a1f79b74f7</v8:Key>
+					<v8:Value xsi:type="xs:decimal">9</v8:Value>
+				</v8:pair>
+				<v8:pair>
+					<v8:Key xsi:type="xs:string">5eb16a0a-28c7-4c46-8f55-3aab30232cf0</v8:Key>
+					<v8:Value xsi:type="xs:decimal">7</v8:Value>
+				</v8:pair>
+			</v8:Value>
+		</v8:Property>
+		<v8:Property name="АдресСхемы">
+			<v8:Value xsi:type="xs:string">e1cib/tempstorage/480c4125-1035-491a-a511-862072f370a7?seanceId=NjgzZDA3NGQtMDk3YS00ZWUzLWEzZTgtZDRmYjRmM2RmNjQ0xeLwxZG96kiLIVs8DXGfTwAAAAA</v8:Value>
+		</v8:Property>
+		<v8:Property name="КлючВарианта">
+			<v8:Value xsi:type="xs:string">25fef244-a289-4cd5-9446-43eb5ace6702</v8:Value>
+		</v8:Property>
+		<v8:Property name="ВариантНаименование">
+			<v8:Value xsi:type="xs:string">Интересы переданные от наладчиков</v8:Value>
+		</v8:Property>
+		<v8:Property name="КлючПредопределенногоВарианта">
+			<v8:Value xsi:type="xs:string">Основной</v8:Value>
+		</v8:Property>
+		<v8:Property name="КонтекстВарианта">
+			<v8:Value xsi:type="xs:string"/>
+		</v8:Property>
+		<v8:Property name="ФормаПараметрыОтбор">
+			<v8:Value xsi:type="v8:Structure"/>
+		</v8:Property>
+	</additionalProperties>
+</Settings>
