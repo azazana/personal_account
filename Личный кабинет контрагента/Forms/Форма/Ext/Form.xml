@@ -188,6 +188,9 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<Save>
+				<Field>ТекстКода</Field>
+			</Save>
 		</Attribute>
 	</Attributes>
 	<Commands>
